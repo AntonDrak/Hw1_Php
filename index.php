@@ -8,145 +8,93 @@
 </head>
 <body>
     <?php
+    // zad1
+    echo "hello world". "<br>";
+    $a = 10;
+    $b = 2;
+    echo $a+$b. "<br>";
+    echo $a-$b. "<br>";
+    echo $a/$b. "<br>";
+    echo $a*$b. "<br>";
 
-  //zad 1
+    //zad2
 
-  $a_zad1 = true;
-  if ($a_zad1 === null) {
-    echo "true";
-  } else {
-    echo "false";
-  };
+    $x = 2;
+    $y = 6;
+    $z = 9;
 
-  echo "</br>" . "zad2" . "</br>";
+    $result = ($x+1)*4-2*( $z-2*$x^2+$y^2 );
 
-  //zad 2
+    echo $result . "<br>";
 
-  $number = 154;
-  $modified_number = str_replace('5', '0', (string)$number);    
-    echo $number . "</br>" . $modified_number ;
+    //zad3
 
-    echo "</br>" . "zad3" . "</br>";
+    $a_zad3 = 17;
+    $b_zad3 = 10;
+    $c_zad3 = $a_zad3 - $b_zad3;
+    $d_zad3 = 7;
+    $result_zad3 = $c_zad3 + $d_zad3 ;
+    echo $result_zad3. "<br>";
 
-  //zad3
+    //zad4
 
-    $a= 1;
-    $b = 11;
-    if ($a <= 1 && $b >=3){
-        echo "сумма; " . $summ =$a + $b; 
-    } else{
-        echo "разность: " . $razn = $a- $b;
-    };
-    
-    echo "</br>" . "zad4" . "</br>";
+    $text1 = "Привет, ";
+    $text2 = "Мир!";
+    echo $text1 . $text2 . "<br>" ;
 
-    //zad 4
+    //zad5
+    $name = "Anton";
+    echo "привет, " . $name . "!" . "<br>";
 
-    $string_zad4 = "anfdgir";
-    if ($string_zad4[0] === 'a'){
-        echo "да";
-    } else {
-        echo "нет";
-    };
-
-    echo "</br>" . "zad4" . "</br>";
-
-    //zad 5
-
-    $str = '123456';
-
-    $sum1 = intval($str[0]) + intval($str[1]) + intval($str[2]);
-    $sum2 = intval($str[3]) + intval($str[4]) + intval($str[5]);
-
-    if ($sum1 === $sum2) {
-    echo 'да';
-    } else {
-    echo 'нет';
-    };
-    
-    echo "</br>" . "zad5" . "</br>";
     //zad6
+    $num = 12345;
+    $sum = 0;
+    while ($num != 0) {
+    $last_number = $num % 10;
+    $sum += $last_number;
+    $num /= 10;
+    }
 
-    $degrees = 180;
-
-
-    if ($degrees >= 0 && $degrees <= 360) {
-    
-    $hours = floor($degrees / 30);
-
-    echo "Прошло $hours часов.";
-    } else {
-    echo "Неверное значение градусов.";
-    };
-
-    echo "</br>" . "zad7" . "</br>";
+    echo $sum;
 
     //zad7
-    $sum_zad7 = 0;
 
-    for ($i = 20; $i <= 45;$i++) {
-        if ($i %5 === 0 ){
-            $sum_zad7 += $i;
-        }
-    };
-
-    echo $sum_zad7;
-
-    echo "</br>" . "zad8" . "</br>";
+    $year = 2000;
+    $hour = 60 * 60;
+    $day = $hour * 24;
+    $mounth = $day * 30;
+    $year_seconds = $mounth * 12;
+    $year_2000_seconds = 2000 * $year_seconds;
+    echo  "</br>" . "сколько секунд в"."</br>" . $hour ."</br>" 
+    . $day . "</br>" . $mounth . "</br>" . $year_seconds . "</br>" . $year_2000_seconds . "</br>" ;
 
     //zad8
-
-    $num_zad8 = 12345; 
-
-    $str_zad8 = strval($num_zad8); 
-
-    for ($i = 1; $i < strlen($str_zad8); $i += 2) {
-    $str_zad8[$i] = '0'; 
-    }
-
-    $result_zad8 = intval($str_zad8); 
-
-    echo $result_zad8; 
-
-    echo "</br>" . "zad9" . "</br>";
-
-    //zad 9
-    $num = 1000;
-    $iterations = 0;
-
-    while ($num >= 50) {
-    $num /= 2;
-    $iterations++;
-    }
-
-    echo "</br>" . "Результат: $num" . PHP_EOL;
-    echo "Количество итераций: $iterations";
-
-//    $num = 1000;
-//    $iterations = 0;
-
-//    for (; $num >= 50; $iterations++) {
-//    $num /= 2;
-//    }
-//
-//    echo "Результат: $num" . PHP_EOL;
-//   echo "Количество итераций: $iterations";
-
-    echo "</br>" . "zad10" . "</br>";
-
+    $time_hours = 22;
+    $time_minutes = 14;
+    $time_seconds = 44;
+    echo "Время  Сейчас" . "</br>" . $time_hours . ":" . $time_minutes . ":" . $time_seconds ."</br>" . "zad9";
+    //zad9
+    $var = 1;
+    $var += 12;
+    $var -= - 14;
+    $var *= 5;
+    $var /= 7;
+    $var += 1;
+    $var -= 1;
+    echo "</br>" . $var . "</br>" . "zad9" . "</br>";  
     //zad10
-
-    $n = 4; 
-
-    for ($i = 0; $i < $n; $i++) {
-    for ($j = 0; $j < $n; $j++) {
-        echo "*";
+    define("last_Name", "Drak");
+    $name = "Anton" ; 
+    $fam  = "Sergeevich";
+    $old = 22 ; 
+    if (defined('last_Name')){
+        echo "Меня зовут " . last_Name . " " . $name_letter = mb_substr($name, 0, 1) . "." . mb_substr($fam, 0 , 1) . "</br>" ."мне " 
+        . $old . " лет" ;
+        
+        
     }
-    echo "<br>";
-    }
 
 
-    
 
 
     ?>
